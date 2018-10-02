@@ -1,0 +1,312 @@
+//page styling
+html {
+	height: 100%;
+	min-height: 600px;
+	min-width: 600px;
+  box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 80px;
+	background-color: rgb(210, 210, 220);
+}
+
+header {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 80px;
+	background-color: rgb(255, 255, 255);
+
+	.logo {
+		left: 30px;
+		
+		.WYNG-logo {
+			color: rgb(92,15,140);
+		}
+
+		.SubTitle {
+			margin-left: 25px;
+			color: black;
+			font-size: 35px;
+			font-weight: 600;
+			font-family: 'Kodchasan', sans-serif;
+		}
+
+		&:hover {
+			cursor: pointer;
+			text-decoration: none;
+		}
+	}
+}
+
+footer {
+	background-color: rgb(65, 65, 65);
+	position:absolute;
+	bottom: 0;
+	width:100%;
+	height:80px;
+	color: white;
+	padding-left: 30px;
+
+	a {
+		color: white;
+
+		&:hover {
+			color: #1dc2d1;
+		}
+	}
+}
+
+//reusable styling
+.Side-by-side {
+	display: flex;
+	flex-direction: row;
+}
+
+.CenteredHorizontally {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50);
+	transform: translateX(-50%);
+}
+
+.CenteredVertically {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50);
+	transform: translateY(-50%);
+}
+
+.AbsoluteCenter {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
+}
+
+
+//component styling
+.Selector {
+	min-width: 525px;
+}
+
+.Welcome {
+	text-align: center;
+	
+	h1 {
+		font-size: 35px;
+	}
+
+	p {
+		font-size: 20px;
+	}
+}
+
+.ButtonContainer {
+	text-align: center;
+}
+
+.PurposeButton {
+	width: 200px;
+	margin: 30px;
+	font-size: 30px;
+	font-weight: 500;
+
+	&:hover {
+		background-color: #1dc2d1;
+	}
+}
+
+.UploadButton {
+	background-color: rgb(92,15,140);
+	color: white;
+}
+
+.VoteButton {
+	background-color: white;
+	color: rgb(92,15,140);
+}
+
+.ErrorPage {
+	color: rgb(92,15,140);
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.UploadContainer {
+	width: 100%;
+}
+
+.FileUploader {
+	width: 100%;
+	align-items: center;
+  justify-content: center;
+}
+
+.UploadDiv {
+	margin: 20px;
+
+	.ButtonBox {
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	h1 {
+		color: rgb(92,15,140);
+		font-family: 'Kodchasan', sans-serif;
+		font-weight: 600;
+		padding-bottom: 5px;
+	}
+
+	p {
+		font-size: 20px;
+		font-weight: 500;
+		padding-left: 10px;
+	}
+}
+
+.FileDropzone {
+	width: 350px;
+	height: 233px;
+	border: 2px dashed rgb(92,15,140);
+	padding: 20px;
+	color: rgb(44, 44, 44);
+
+	&:hover {
+		border: 2px dashed #1dc2d1;
+		color: #1dc2d1;
+	}
+
+	span {
+		font-size: 20px;
+		font-weight: 400;
+	}
+}
+
+.UploadButton {
+	background-color: rgb(92,15,140);
+	margin: 0 20px;
+
+	&:hover:enabled {
+		background-color: #1dc2d1;
+	}
+}
+
+.ClearButton {
+	margin: 0 20px;
+	background-color: rgb(65, 65, 65);
+
+	&:hover:enabled {
+		background-color: #1dc2d1;
+	}
+}
+
+.GalleryContainer {
+	margin-bottom: 20px;
+
+	.GalleryViewer {
+		justify-content: center;
+		background-color: rgb(44, 44, 44);
+		width: 100%;
+		height: 200px;
+
+		.PhotoContainer {
+			width: 20%;
+			height: 200px;
+			padding: 1%;
+			text-align: center;
+
+			.Photo {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+}
+
+.ThankYou {
+	text-align: center;
+
+	h1 {
+		font-size: 30px;
+		color: rgb(92,15,140);
+	}
+
+	p{
+		font-size: 20px;
+		font-weight: 500;
+		padding: 20px 0 0 0;
+	}
+}
+
+.VoteGreeting {
+	text-align: center;
+	color: white;
+	padding: 4px;
+	background-color:rgb(92,15,140);
+	z-index: 10;
+}
+
+.Gallery {
+	padding: 20px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+
+	.PhotoContainer {
+		position: relative;
+		width: 50%;
+		padding: 5px;
+
+		.Photo {
+			max-width: 100%;
+			max-height: 100%;
+			z-index: 0;
+
+			&:hover {
+				-webkit-box-shadow: 0px 0px 10px 5px rgba(29,194,209,0.5);
+				-moz-box-shadow: 0px 0px 10px 5px rgba(29,194,209,0.5);
+				box-shadow: 0px 0px 10px 5px rgba(29,194,209,0.5);
+				cursor: pointer;
+			}
+		}
+
+		.VoteCount {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 10;
+			color: white;
+			text-align: right;
+			font-size: 60px;
+			font-weight: 600;
+			font-family: 'Covered By Your Grace', cursive;
+			visibility: visible;
+			padding: 20px 30px;
+		}
+	}
+}
+
+.VotingGallery {
+	position: relative;
+}
+
+.Overlay {
+	position: absolute;
+	top: 64px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 64px);
+	z-index: 5;
+	visibility: visible;
+	background-color: rgba(0, 0, 0, 0.534);
+}
